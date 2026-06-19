@@ -1,8 +1,0 @@
-[functions]
-  directory = "netlify/functions"
-
-[[headers]]
-  for = "/api/telegram-form"
-  [headers.values]
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "same-origin"
