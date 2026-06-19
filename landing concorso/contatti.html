@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contatta la redazione di Caso Aperto." />
+    <meta name="theme-color" content="#090909" />
+    <title>Contatti | Caso Aperto</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body class="site-page">
+    <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Caso Aperto, homepage">
+        <span class="brand-mark"><span>C</span><span>A</span></span>
+        <span>Caso Aperto <strong>Storie da indagare</strong></span>
+      </a>
+      <nav aria-label="Navigazione principale">
+        <a href="index.html">Home</a>
+        <a href="premio-caso-aperto-noir-2026.html">Premio Caso Aperto Noir 2026</a>
+        <a href="collabora.html">Collabora</a>
+        <a class="active" href="contatti.html">Contatti</a>
+        <button class="nav-newsletter" type="button" data-open-newsletter>Newsletter</button>
+      </nav>
+    </header>
+
+    <main id="contenuto">
+      <section class="page-hero">
+        <p class="eyebrow"><span></span> Parliamone</p>
+        <h1>Contatti.</h1>
+        <p>
+          Segnalazioni, proposte editoriali, informazioni sul concorso o semplicemente
+          una domanda: scrivi alla redazione.
+        </p>
+      </section>
+
+      <section class="contact-layout">
+        <div class="contact-info">
+          <p class="eyebrow"><span></span> Redazione</p>
+          <h2>Un filo diretto.</h2>
+          <a class="contact-email" href="mailto:novaforma00@gmail.com">novaforma00@gmail.com</a>
+          <p>Rispondiamo appena possibile, normalmente entro alcuni giorni lavorativi.</p>
+          <div class="contact-topics">
+            <span>Concorso letterario</span>
+            <span>Proposte e segnalazioni</span>
+            <span>Collaborazioni</span>
+            <span>Informazioni generali</span>
+          </div>
+        </div>
+
+        <form
+          class="editorial-form"
+          name="contatti"
+          method="POST"
+          action="/api/telegram-form"
+          data-telegram-form
+        >
+          <input type="hidden" name="tipo_modulo" value="Contatti" />
+          <p class="hidden-field"><label>Non compilare: <input name="bot-field" /></label></p>
+          <label>Nome e cognome<input type="text" name="nome" autocomplete="name" required /></label>
+          <label>Email<input type="email" name="email" autocomplete="email" required /></label>
+          <label>
+            Motivo del contatto
+            <select name="motivo" required>
+              <option value="">Seleziona</option>
+              <option>Informazioni sul concorso</option>
+              <option>Proposta editoriale</option>
+              <option>Segnalazione</option>
+              <option>Collaborazione</option>
+              <option>Altro</option>
+            </select>
+          </label>
+          <label>Messaggio<textarea name="messaggio" rows="7" required></textarea></label>
+          <label class="form-consent">
+            <input type="checkbox" name="privacy" required />
+            <span>Ho letto la <a href="privacy.html">privacy policy</a>.</span>
+          </label>
+          <button class="button button-form" type="submit">Invia il messaggio</button>
+          <p class="form-status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-mark"><span>C</span><span>A</span></span>
+        <p><strong>Caso Aperto</strong><br />Storie, casi, misteri e cultura del racconto.</p>
+      </div>
+      <div class="footer-links">
+        <a href="premio-caso-aperto-noir-2026.html">Premio Caso Aperto Noir 2026</a><a href="collabora.html">Collabora</a>
+        <a href="contatti.html">Contatti</a><button type="button" data-open-newsletter>Newsletter</button>
+      </div>
+      <div class="footer-legal">
+        <a href="privacy.html">Privacy</a><a href="cookie.html">Cookie</a>
+        <a href="termini.html">Termini</a><p>© 2026 Caso Aperto</p>
+      </div>
+    </footer>
+  </body>
+</html>
