@@ -221,6 +221,9 @@ function setupTelegramForms() {
         const result = await response.json().catch(() => ({}));
 
         if (!response.ok) {
+          if (response.status === 404) {
+            throw new Error("Funzione Telegram non pubblicata. Verifica la cartella api su Vercel.");
+          }
           throw new Error(result.error || "Invio non riuscito.");
         }
 
