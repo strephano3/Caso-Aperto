@@ -1,52 +1,58 @@
 {
-  "cleanUrls": true,
-  "rewrites": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/",
-      "destination": "/index.html"
+      "src": "api/telegram-form.js",
+      "use": "@vercel/node"
     },
     {
-      "source": "/premio-caso-aperto-noir-2026",
-      "destination": "/premio-caso-aperto-noir-2026.html"
-    },
-    {
-      "source": "/contatti",
-      "destination": "/contatti.html"
-    },
-    {
-      "source": "/collabora",
-      "destination": "/collabora.html"
-    },
-    {
-      "source": "/privacy",
-      "destination": "/privacy.html"
-    },
-    {
-      "source": "/cookie",
-      "destination": "/cookie.html"
-    },
-    {
-      "source": "/termini",
-      "destination": "/termini.html"
-    },
-    {
-      "source": "/grazie",
-      "destination": "/grazie.html"
+      "src": "**/*",
+      "use": "@vercel/static"
     }
   ],
-  "headers": [
+  "routes": [
     {
-      "source": "/api/telegram-form",
-      "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "Referrer-Policy",
-          "value": "same-origin"
-        }
-      ]
+      "src": "/api/telegram-form",
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "Referrer-Policy": "same-origin"
+      },
+      "dest": "/api/telegram-form.js"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/premio-caso-aperto-noir-2026",
+      "dest": "/premio-caso-aperto-noir-2026.html"
+    },
+    {
+      "src": "/contatti",
+      "dest": "/contatti.html"
+    },
+    {
+      "src": "/collabora",
+      "dest": "/collabora.html"
+    },
+    {
+      "src": "/privacy",
+      "dest": "/privacy.html"
+    },
+    {
+      "src": "/cookie",
+      "dest": "/cookie.html"
+    },
+    {
+      "src": "/termini",
+      "dest": "/termini.html"
+    },
+    {
+      "src": "/grazie",
+      "dest": "/grazie.html"
     }
   ]
 }
