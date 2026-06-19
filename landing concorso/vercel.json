@@ -1,0 +1,52 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/premio-caso-aperto-noir-2026",
+      "destination": "/premio-caso-aperto-noir-2026.html"
+    },
+    {
+      "source": "/contatti",
+      "destination": "/contatti.html"
+    },
+    {
+      "source": "/collabora",
+      "destination": "/collabora.html"
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy.html"
+    },
+    {
+      "source": "/cookie",
+      "destination": "/cookie.html"
+    },
+    {
+      "source": "/termini",
+      "destination": "/termini.html"
+    },
+    {
+      "source": "/grazie",
+      "destination": "/grazie.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/api/telegram-form",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "same-origin"
+        }
+      ]
+    }
+  ]
+}
