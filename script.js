@@ -61,7 +61,7 @@ function createNewsletterModal() {
     <div class="newsletter-dialog" role="dialog" aria-modal="true" aria-labelledby="newsletter-title">
       <button class="newsletter-close" type="button" aria-label="Chiudi newsletter">×</button>
       <p class="eyebrow"><span></span> Newsletter Caso Aperto</p>
-      <h2 id="newsletter-title">Le storie che vale la pena aprire.</h2>
+      <h2 id="newsletter-title">Le storie arrivano<br />prima a chi le cerca.</h2>
       <p>Approfondimenti, nuovi casi, concorsi e chiamate aperte direttamente nella tua casella email.</p>
       <form class="newsletter-form" name="newsletter" method="POST" action="/api/telegram-form" data-telegram-form>
         <input type="hidden" name="tipo_modulo" value="Newsletter" />
